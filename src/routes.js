@@ -2,6 +2,6 @@ import Home from './components/home/Home.vue';
 import Cadastro from './components/cadastro/Cadastro.vue';
 
 export const routes = [
-    { path: '', component: Home },
-    { path: '/cadastro', component: Cadastro }
+    { path: '', name: 'Home', component: Home },
+    { path: '/cadastro', name: 'Cadastro', component: Cadastro }
 ];
