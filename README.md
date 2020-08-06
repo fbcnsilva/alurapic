@@ -1,6 +1,6 @@
 # alurapic
 
-> A Vue.js project
+> This project was created so that I can learn a little more and also consolidate my knowledge in vueJs.
 
 ## Build Setup
 
@@ -8,7 +8,7 @@
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve with live reload at localhost:8080
 npm run dev
 
 # build for production with minification
