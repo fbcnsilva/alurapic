@@ -1,21 +1,28 @@
 <template>
   <div class="corpo">
-      <nav>
-        <ul>
-            <li><router-link to="/">Home</router-link></li>
-            <li><router-link to="/cadastro">Cadastro</router-link></li>
-        </ul>
-      </nav>
-      <router-view></router-view>
+      <meu-menu :rotas="routes"/>
+      <transition name="pagina">
+        <router-view></router-view>
+      </transition>
   </div>
 </template>
 
 <script>
 
-//import Painel from './components/shared/painel/Painel.vue';
-//import ImagemResponsiva from './components/shared/imagem-responsiva/ImagemResponsiva.vue';
+import { routes } from './routes.js'
+import Menu from './components/shared/menu/Menu.vue';
 
 export default {
+
+  components: {
+    'meu-menu': Menu
+  },
+
+  data () {
+    return {
+      routes
+    }
+  }
 
 }
 
@@ -23,8 +30,15 @@ export default {
 
 <style>
   .corpo {
-      font-family: Helvetica, sans-serif;
-      margin: 0 auto;
-      width: 96%;
+    font-family: Helvetica, sans-serif;
+    margin: 0 auto;
+    width: 96%;
+  }
+
+  .pagina-enter-active, .pagina-leave-active {
+    transition: opacity .3s
+  }
+  .pagina-enter, .pagina-leave-active {
+    opacity: 0
   }
 </style>
