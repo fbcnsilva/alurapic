@@ -12,7 +12,7 @@ export default {
 
 </script>
 <style scoped>
-    .centralizado {
-        text-align: center;
-    }
+  .centralizado {
+    text-align: center;
+  }
 </style>
